@@ -28,8 +28,12 @@ return {
    	opts = {
    		ensure_installed = {
    			"vim", "lua", "vimdoc",
-        "html", "css", "typescript", "markdown"
+        "html", "css", "typescript", "markdown", "javascript"
    		},
+      highlight = {
+        enable = true,
+        additional_vim_highlighting = false
+      }
    	},
   },
 }
