@@ -1,6 +1,14 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+vim.keymap.set('n', '<Leader>t', ':FloatermToggle<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>:FloatermToggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>tt', ':FloatermNew<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Space>z', ':FloatermNext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Space>r', ':FloatermPrev<CR>', { noremap = true, silent = true })
+-- vim.keymap.set('n', '<Space>z', ':FloatermShow<CR>', { noremap = true, silent = true })
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 

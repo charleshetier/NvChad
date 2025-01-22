@@ -10,6 +10,15 @@ return {
     cmd = "Git"
   },
 
+{
+  "voldikss/vim-floaterm",
+  lazy = false, -- Ensure the plugin is loaded immediately
+  -- config = function()
+    -- Optional: Add any custom configuration here
+    -- vim.g.floaterm_keymap_toggle = '<F12>' -- Example: Set a toggle key
+  -- end
+},
+
 -- These are some examples, uncomment them if you want to see them work!
 -- {
 --    "neovim/nvim-lspconfig",
