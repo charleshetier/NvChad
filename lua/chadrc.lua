@@ -5,8 +5,17 @@
 ---@type ChadrcConfig
 local M = {}
 
+-- local vim = vim
+-- local opt = vim.opt
+
+-- opt.foldmethod = "expr"
+-- opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 M.base46 = {
-	theme = "onedark",
+	-- theme = "onedark",
+	-- theme = "monochrome",
+	theme = "dark_horizon",
+  -- theme = "yoru",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -15,10 +24,13 @@ M.base46 = {
 }
 
 -- M.nvdash = { load_on_startup = true }
--- M.ui = {
+M.ui = {
+  statusline = {
+    theme = "vscode_colored"
+  }
 --       tabufline = {
 --          lazyload = false
 --      }
---}
+}
 
 return M

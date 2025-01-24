@@ -1,13 +1,19 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+vim.opt.foldcolumn="1"
+
+-- Floatterm mappings
 vim.keymap.set('n', '<Leader>t', ':FloatermToggle<CR>', { noremap = true, silent = true })
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>:FloatermToggle<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>tt', ':FloatermNew<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Space>z', ':FloatermNext<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Space>r', ':FloatermPrev<CR>', { noremap = true, silent = true })
--- vim.keymap.set('n', '<Space>z', ':FloatermShow<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>tz', ':FloatermNext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>tr', ':FloatermPrev<CR>', { noremap = true, silent = true })
+
+-- Telescope mappings
+vim.keymap.set('n', '<Leader>fd', ':Telescope lsp_definitions<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>fr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
